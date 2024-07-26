@@ -15,6 +15,8 @@ import androidx.fragment.app.FragmentManager;
 import com.example.newproject.databinding.ActivityMainBinding;
 import com.example.newproject.view.DetailFragment;
 import com.example.newproject.view.HomeFragment;
+import com.example.newproject.view.SearchFragment;
+import com.example.newproject.view.TextFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -45,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new HomeFragment();
                     else if (item.getItemId() == R.id.detailFragment)
                         selectedFragment = new DetailFragment();
+                    else if (item.getItemId() == R.id.textFragment)
+                        selectedFragment = new TextFragment();
+                    else if (item.getItemId() == R.id.searchFragment)
+                        selectedFragment = new SearchFragment();
+
                     getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
                     getSupportFragmentManager().beginTransaction()

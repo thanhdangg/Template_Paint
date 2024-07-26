@@ -14,7 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.newproject.R;
 import com.example.newproject.databinding.FragmentDetailBinding;
+import com.example.newproject.databinding.FragmentSearchBinding;
 import com.example.newproject.model.Template;
 import com.example.newproject.model.TemplateCategory;
 import com.example.newproject.viewmodel.CategoryAdapter;
@@ -22,30 +24,29 @@ import com.example.newproject.viewmodel.TemplateAdapter;
 import com.example.newproject.viewmodel.TemplateViewModel;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
+public class SearchFragment extends Fragment {
 
-public class DetailFragment extends Fragment {
     private TemplateViewModel templateViewModel;
-    private FragmentDetailBinding binding;
+    private FragmentSearchBinding binding;
     private List<Template> templateList = new ArrayList<>();
     private List<String> categoryTypes = new ArrayList<>();
     private TemplateAdapter templateAdapter;
     private CategoryAdapter categoryAdapter;
-
-    public DetailFragment() {
+    public SearchFragment() {
     }
-
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentDetailBinding.inflate(inflater, container, false);
+        binding = FragmentSearchBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

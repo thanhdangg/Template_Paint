@@ -1,5 +1,6 @@
 package com.example.newproject.viewmodel;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String category = categories.get(position);
         holder.categoryTextView.setText(category);
+        Log.d("CategoryAdapter", "Binding category: " + category + " at position: " + position);
 
         if (category.equals(selectedCategory)) {
             holder.categoryTextView.setBackgroundResource(R.drawable.rounded_border_selected);

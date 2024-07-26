@@ -2,6 +2,8 @@ package com.example.newproject.view;
 
 import android.os.Bundle;
 
+import androidx.fragment.app.Fragment;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.newproject.databinding.FragmentDetailBinding;
+import com.example.newproject.databinding.FragmentTextBinding;
 import com.example.newproject.model.Template;
 import com.example.newproject.model.TemplateCategory;
 import com.example.newproject.viewmodel.CategoryAdapter;
@@ -27,25 +30,27 @@ import java.util.List;
 import java.util.Set;
 
 
-public class DetailFragment extends Fragment {
+public class TextFragment extends Fragment {
     private TemplateViewModel templateViewModel;
-    private FragmentDetailBinding binding;
+    private FragmentTextBinding binding;
     private List<Template> templateList = new ArrayList<>();
     private List<String> categoryTypes = new ArrayList<>();
     private TemplateAdapter templateAdapter;
     private CategoryAdapter categoryAdapter;
-
-    public DetailFragment() {
+    public TextFragment() {
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentDetailBinding.inflate(inflater, container, false);
+        binding = FragmentTextBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

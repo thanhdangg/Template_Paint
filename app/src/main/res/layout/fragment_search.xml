@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.DetailFragment"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#E6E6FA">
+    android:background="#DDA0DD"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_type_category"
@@ -15,7 +16,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="horizontal"
         />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_template"
@@ -26,7 +26,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         >
-
     </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

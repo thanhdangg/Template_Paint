@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.DetailFragment"
+    tools:context=".view.TextFragment"
     android:orientation="vertical"
-    android:background="#E6E6FA">
+    android:background="#7B68EE"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_type_category"
