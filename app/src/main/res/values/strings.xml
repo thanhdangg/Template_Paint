@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Home</string>
+    <string name="detail">Detail</string>
+    <string name="hom_fragment">Home Fragment</string>
+    <string name="detail_fragment">Detail Fragment</string>
+    <string name="category_title">Category Title</string>
+</resources>
